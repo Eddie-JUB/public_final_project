@@ -232,7 +232,7 @@ def app():
                     
                         <style>
                             .container {
-                                background-color: #000000; /* Change the background color to black */
+                                background-color: #0f1116; /* Change the background color to black */
                                 /* Add other styles such as padding or border if needed */
                             }
                         </style>

@@ -41,9 +41,7 @@ from PIL import Image
 
 # components.html(ga_tracking_code, height=10)
 
-def app():
-
-    st.markdown(
+st.markdown(
                 """
                     <!-- Global site tag (gtag.js) - Google Analytics -->
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
@@ -54,6 +52,11 @@ def app():
                         gtag('config', 'G-**********');
                     </script>
                 """, unsafe_allow_html=True)
+
+
+def app():
+
+    
 
     # st.set_page_config(layout="wide")
     # 첫 화면

@@ -47,16 +47,16 @@ def app():
 
     # Google Analytics tracking code
     ga_tracking_code = """
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+                        <!-- Google tag (gtag.js) -->
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+                    <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
 
-    gtag('config', 'YOUR_TRACKING_ID');
-    </script>
-    """
+                    gtag('config', 'G-8QXBPGZNVR');
+                    </script>
+                        """
 
     # Streamlit 페이지에 Google Analytics 코드 추가
     components.html(ga_tracking_code, height=0)

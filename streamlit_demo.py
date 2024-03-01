@@ -4,19 +4,47 @@ import yfinance as yf
 from models import cnn_model_inference
 import streamlit.components.v1 as components
 from PIL import Image
+# from bs4 import BeautifulSoup
+# import pathlib
+# import shutil
 
 
-ga_tracking_code = """
-                        <!-- Google tag (gtag.js) -->
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
-                    <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
+# GA_ID = "google_analytics"
+# GA_SCRIPT = """
+# <!-- Google tag (gtag.js) -->
+# <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+# <script id='google_analytics'>
+#   window.dataLayer = window.dataLayer || [];
+#   function gtag(){dataLayer.push(arguments);}
+#   gtag('js', new Date());
+#   gtag('config', 'G-XXXXXXXXXX');
+# </script>
+# """
 
-                    gtag('config', 'G-8QXBPGZNVR');
-                    </script>
-                        """
+st.markdown(
+    """
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-**********');
+        </script>
+    """, unsafe_allow_html=True)
+
+
+# ga_tracking_code = """
+#                         <!-- Google tag (gtag.js) -->
+#                         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+#                         <script>
+#                         window.dataLayer = window.dataLayer || [];
+#                         function gtag(){dataLayer.push(arguments);}
+#                         gtag('js', new Date());
+
+#                         gtag('config', 'G-8QXBPGZNVR');
+#                         </script>
+#                         """
 
     # Streamlit 페이지에 Google Analytics 코드 추가
 
@@ -26,7 +54,7 @@ ga_tracking_code = """
 def app():
 
     # Google Analytics tracking code
-    components.html(ga_tracking_code, height=0)
+    components.html(ga_tracking_code, height=10)
 
     # st.set_page_config(layout="wide")
     # 첫 화면

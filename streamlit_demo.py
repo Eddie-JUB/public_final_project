@@ -54,7 +54,7 @@ st.markdown(
 def app():
 
     # Google Analytics tracking code
-    components.html(ga_tracking_code, height=10)
+    # components.html(ga_tracking_code, height=10)
 
     # st.set_page_config(layout="wide")
     # 첫 화면

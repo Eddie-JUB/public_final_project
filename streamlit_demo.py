@@ -9,14 +9,14 @@ from PIL import Image
 
 # Google Analytics tracking code
 ga_tracking_code = """
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'YOUR_TRACKING_ID');
+  gtag('config', 'G-8QXBPGZNVR');
 </script>
 """
 

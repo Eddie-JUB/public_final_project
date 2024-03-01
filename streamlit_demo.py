@@ -10,7 +10,7 @@ from PIL import Image
 # Google Analytics tracking code
 ga_tracking_code = """
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PS9JDTXB"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

@@ -197,7 +197,17 @@ def app():
 
 
     components.html("""
-                        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    
+                        <style>
+                            .container {
+                                background-color: #000000; /* Change the background color to black */
+                                /* Add other styles such as padding or border if needed */
+                            }
+                        </style>
+
+                        <div class="container" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+
+                        # <div style="display: flex; justify-content: center; align-items : center; gap: 20px;">
                             <!-- KakaoTalk Channel Add Button -->
                             <div id="kakao-talk-channel-add-button" data-channel-public-id="_kWpaG" data-size="large" data-support-multiple-densities="true"></div>
 

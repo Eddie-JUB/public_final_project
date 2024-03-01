@@ -7,22 +7,6 @@ from PIL import Image
 
 
 
-# Google Analytics tracking code
-ga_tracking_code = """
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8QXBPGZNVR');
-</script>
-"""
-
-
-# Streamlit 페이지에 Google Analytics 코드 추가
-components.html(ga_tracking_code, height=0)
 
 def app():
     # st.set_page_config(layout="wide")
@@ -348,4 +332,19 @@ def app():
 )
 
 if __name__ == "__main__":
+        # Google Analytics tracking code
+    ga_tracking_code = """
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8QXBPGZNVR');
+    </script>
+    """
+
+    # Streamlit 페이지에 Google Analytics 코드 추가
+    components.html(ga_tracking_code, height=0)
     app()

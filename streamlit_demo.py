@@ -179,7 +179,8 @@ def app():
             </script>
                         """
 
-
+    components.html(html_content, height=600)
+    
 
     components.html("""
                         <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
@@ -229,7 +230,7 @@ def app():
 
 
 
-    components.html(html_content, height=600)
+    
 
     st.text('')
     st.text('')

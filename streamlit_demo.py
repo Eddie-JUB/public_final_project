@@ -164,8 +164,9 @@ def app():
     """
      ### 🤖알려주가AI 주가 예측 서비스가 도움이 되셨나요? \n
      아래의 설문을 통해 의견을 남겨주세요! \n
-     잠깐의 시간만 투자해 주신다면 \n
+     단 1분의 시간만 투자해주신다면 \n
      알려주가AI를 더 나은 서비스로 발전시키는데 큰 힘이 됩니다! \n
+     추첨을 통해 스타벅스 기프티콘을 드립니다!
     """
     )
     # 설문
@@ -177,25 +178,68 @@ def app():
             </div>
             <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'standard', {'width':'90vw','height':'600px','opacity':0.15000000000000002});">
             </script>
-                        """
-
-    # 버튼형    
-    # html_content = """
-    #                 <button formsappId="65dee1274bfcc0164b71b039"></button>
-    #                 <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'popup', {'overlay':'rgba(45,45,45,0.79)','button':{'color':'#ff9e24','text':'Click here!'},'width':'800px','height':'600px','openingAnimation':{'entrance':'animate__bounceIn','exit':'animate__bounceOut'}});"></script>
-    #                 """
-    # 사이드형
-#     html_content = """
-                    
-# <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'sidetab', {'button':{'text':'Click here!','color':'#ff9e24'},'align':{'horizontal':'right','vertical':'middle'},'width':'400px','height':'500px'});"></script>
-#     """
+                    """
 
     components.html(html_content, height=600)
 
-    st.text('')
-    st.text('')
-    st.text('')
-    st.text('')
+
+    components.html("""
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                            <!-- KakaoTalk Channel Add Button -->
+                            <div id="kakao-talk-channel-add-button" data-channel-public-id="_kWpaG" data-size="large" data-support-multiple-densities="true"></div>
+
+                            <!-- KakaoTalk Channel Chat Button -->
+                            <div id="kakao-talk-channel-chat-button" data-channel-public-id="_kWpaG" data-title="question" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
+
+                            <!-- Twitter Share Button -->
+                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="알려주가AI: 인공지능 기반 주가 예측 웹-앱 서비스! 🎈" data-url="https://ai-stock-prediction.streamlit.app/" data-show-count="false">Tweet</a>
+                        </div>
+
+                        <script>
+                            (function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.6.0/kakao.channel.min.js';
+                                js.integrity = 'sha384-ty4605mXDCz/lA+RRt4bHCRa1c9uIaIi0JrsmmWVxaNJZzu58jMhJK8wAMqDxrYv';
+                                js.crossOrigin = 'anonymous';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            })(document, 'script', 'kakao-js-sdk');
+                        </script>
+                        <script>
+                            window.kakaoAsyncInit = function() {
+                                
+                                Kakao.Channel.createAddChannelButton({
+                                    container: '#kakao-talk-channel-add-button',
+                                    channelPublicId: '_kWpaG'
+                                });
+                                Kakao.Channel.createChatButton({
+                                    container: '#kakao-talk-channel-chat-button',
+                                    channelPublicId: '_kWpaG'
+                                });
+                            };
+                        </script>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        """, height=120)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     st.markdown("""

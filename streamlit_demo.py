@@ -8,6 +8,9 @@ import pathlib
 from bs4 import BeautifulSoup
 import shutil
 
+
+
+
 # GA_ID = "google_analytics"
 # GA_SCRIPT = """
 # <!-- Google tag (gtag.js) -->
@@ -41,6 +44,23 @@ import shutil
 
 
 def app():
+
+    # Google Analytics tracking code
+    ga_tracking_code = """
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+    """
+
+    # Streamlit 페이지에 Google Analytics 코드 추가
+    components.html(ga_tracking_code, height=0)
+
     # st.set_page_config(layout="wide")
     # 첫 화면
     img = Image.open('첫화면테스트.png')

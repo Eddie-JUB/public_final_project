@@ -92,5 +92,3 @@ torch==2.1.0
 grad-cam
 hmmlearn
 statsmodels
-# pathlib==1.0.1
-# pytest-shutil

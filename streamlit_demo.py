@@ -39,11 +39,25 @@ def app():
     st.text('')
 
     st.markdown(
-    """
-    #### 🤖 자, 이제 알려주가AI와 함께 
-    #### 주식 투자의 달인이 되어볼까요?! 
-    """
-    )
+                """
+                <style>
+                .markdown-text-container {
+                    text-align: center;
+                }
+                </style>
+
+                <div class="markdown-text-container">
+                <h3> 준비되셨나요? </h3>
+                <h3>이제 🤖알려주가AI와 함께</h3>
+                <h3>주식 투자의 달인이 되어볼까요?!</h3>
+                </div>
+                """,
+                    unsafe_allow_html=True
+                )
+
+
+
+
     st.text('')
     st.text('')
     st.text('')
@@ -148,7 +162,6 @@ def app():
 
 
     # CNN 모델 예측 결과
-    
     cnn_model_inference(company, ticker, period, interval)
 
     st.text('')
@@ -164,8 +177,9 @@ def app():
     """
      ### 🤖알려주가AI 주가 예측 서비스가 도움이 되셨나요? \n
      아래의 설문을 통해 의견을 남겨주세요! \n
-     잠깐의 시간만 투자해 주신다면 \n
+     단 1분의 시간만 투자해주신다면 \n
      알려주가AI를 더 나은 서비스로 발전시키는데 큰 힘이 됩니다! \n
+     추첨을 통해 스타벅스 기프티콘을 드립니다!
     """
     )
     # 설문
@@ -177,10 +191,10 @@ def app():
             </div>
             <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'standard', {'width':'90vw','height':'600px','opacity':0.15000000000000002});">
             </script>
-                        """
+                    """
 
     components.html(html_content, height=600)
-    
+
 
     components.html("""
                         <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
@@ -223,19 +237,6 @@ def app():
 
 
 
-
-
-
-
-
-
-
-    
-
-    st.text('')
-    st.text('')
-    st.text('')
-    st.text('')
 
 
     st.markdown("""
@@ -300,55 +301,6 @@ def app():
                 </table>
 
                 """
-
-
-
-#     html_code = """
-#     <br/>
-# <table>
-#     <tr height="160px">
-#         <td align="center" width="150px">
-#             <a href="https://github.com/minyun-e"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/6ac5b0db-2f18-4e80-a571-77c0812c0bdc"></a>
-#             <br/>
-#             <a href="https://github.com/minyun-e"><strong>김민윤</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/2018007956"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/cabba669-dda2-4ead-9f73-00128c0ae175"/></a>
-#             <br/>
-#             <a href="https://github.com/2018007956"><strong>김채아</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/Eddie-JUB"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2829c82d-ecc8-49fd-9cb3-ae642fbe7513"/></a>
-#             <br/>
-#             <a href="https://github.com/Eddie-JUB"><strong>배종욱</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/FinalCold"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/fdeb0582-a6f1-4d70-9d08-dc2f9639d7a5"/></a>
-#             <br />
-#             <a href="https://github.com/FinalCold"><strong>박찬종</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/MalMyeong"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/0583f648-d097-44d9-9f05-58102434f42d"/></a>
-#             <br />
-#             <a href="https://github.com/MalMyeong"><strong>조명현</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#               <a href="https://github.com/classaen7"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2806abc1-5913-4906-b44b-d8b92d7c5aa5"/></a>
-#               <br />
-#               <a href="https://github.com/classaen7"><strong>최시현</strong></a>
-#               <br />
-#           </td>
-#     </tr>
-# </table>  
-# <br/>
-# <br/>
-
-# """
 
 
     st.markdown(html_code, unsafe_allow_html=True)

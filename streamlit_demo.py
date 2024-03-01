@@ -164,9 +164,8 @@ def app():
     """
      ### 🤖알려주가AI 주가 예측 서비스가 도움이 되셨나요? \n
      아래의 설문을 통해 의견을 남겨주세요! \n
-     단 1분의 시간만 투자해주신다면 \n
+     잠깐의 시간만 투자해 주신다면 \n
      알려주가AI를 더 나은 서비스로 발전시키는데 큰 힘이 됩니다! \n
-     추첨을 통해 스타벅스 기프티콘을 드립니다!
     """
     )
     # 설문
@@ -178,9 +177,8 @@ def app():
             </div>
             <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'standard', {'width':'90vw','height':'600px','opacity':0.15000000000000002});">
             </script>
-                    """
+                        """
 
-    components.html(html_content, height=600)
 
 
     components.html("""
@@ -231,15 +229,12 @@ def app():
 
 
 
+    components.html(html_content, height=600)
 
-
-
-
-
-
-
-
-
+    st.text('')
+    st.text('')
+    st.text('')
+    st.text('')
 
 
     st.markdown("""

@@ -5,6 +5,25 @@ from models import cnn_model_inference
 import streamlit.components.v1 as components
 from PIL import Image
 
+
+
+# Google Analytics tracking code
+ga_tracking_code = """
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PS9JDTXB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'YOUR_TRACKING_ID');
+</script>
+"""
+
+
+# Streamlit 페이지에 Google Analytics 코드 추가
+components.html(ga_tracking_code, height=0)
+
 def app():
     # st.set_page_config(layout="wide")
     # 첫 화면

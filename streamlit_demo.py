@@ -4,6 +4,7 @@ import yfinance as yf
 from models import cnn_model_inference
 import streamlit.components.v1 as components
 from PIL import Image
+import streamlit_analytics
 
 
 ga_tracking_code = """

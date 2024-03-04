@@ -105,6 +105,7 @@ def app():
         "Apple": "AAPL",
         "Google": "GOOGL",
         "Nvidia": "NVDA",
+        "AMD": "AMD",
         'Samsung': '005930.KS',
         'Naver': '035420.KS',
         'Kakao': '035720.KS',

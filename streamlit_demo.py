@@ -361,5 +361,6 @@ def app():
 )
 
 if __name__ == "__main__":
-
-    app()
+    with streamlit_analytics.track(save_to_json='tracked.json'):
+        app()
+    # app()
